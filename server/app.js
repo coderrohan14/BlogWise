@@ -1,0 +1,75 @@
+const express = require("express");
+require("express-async-errors");
+require("dotenv").config();
+require("./passport");
+const app = express();
+const connectDB = require("./db/connect");
+const cookieParser = require("cookie-parser");
+const notFoundMiddleware = require("./middlewares/not-found");
+const authRouter = require("./routes/users/auth");
+const postsRouter = require("./routes/users/posts");
+const errorHandlerMiddleware = require("./middlewares/error-handler");
+const passport = require("passport");
+const cors = require("cors");
+const bodyParser = require("body-parser");
+
+app.use(
+  cookieParser({
+    sameSite: "none",
+  })
+);
+
+app.set("view engine", "ejs");
+
+app.use(
+  cors({
+    origin: true,
+    credentials: true,
+  })
+);
+
+app.use(bodyParser.json());
+
+app.use(express.urlencoded({ extended: true }));
+
+app.use(express.static("public"));
+
+app.use(passport.initialize());
+
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Credentials", true);
+  res.header(
+    "Access-Control-Allow-Methods",
+    "GET,PUT,POST,DELETE,UPDATE,OPTIONS"
+  );
+  res.header(
+    "Access-Control-Allow-Headers",
+    "X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept"
+  );
+  next();
+});
+
+app.use("/auth", authRouter);
+app.use("/posts", postsRouter);
+
+app.get("/", (req, res) => {
+  res.send("Welcome to the server...");
+});
+
+app.use(notFoundMiddleware);
+app.use(errorHandlerMiddleware);
+
+const port = process.env.PORT || 4000;
+
+const start = async () => {
+  try {
+    await connectDB(process.env.MONGO_URI);
+    app.listen(port, () => {
+      console.log(`Server started on port ${port}...`);
+    });
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+start();

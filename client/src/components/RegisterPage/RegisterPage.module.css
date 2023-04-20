@@ -1,0 +1,110 @@
+.registerPage {
+  min-height: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.registerForm {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  width: 40%;
+  box-shadow: 0 0 10px #dadada;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.registerForm input {
+  width: 80%;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  box-shadow: 0 0 2px #dadada, 0 0 2px #dadada, 0 0 2px #dadada, 0 0 2px #dadada;
+  padding: 15px;
+}
+
+.signUpButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #384045;
+  margin-top: 40px;
+  width: 30%;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.divider {
+  margin: auto;
+  width: 100%;
+  opacity: 0.7;
+  border: dotted;
+  border-width: 0;
+  border-top-width: 6px;
+}
+
+.googleButton {
+  margin: auto;
+  margin: 20px 0 10px 0;
+  display: flex;
+  width: 50%;
+  padding: 5px;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  background-color: #384045;
+  cursor: pointer;
+}
+
+.googleButton > p {
+  margin: 0;
+  text-decoration: none;
+  margin-left: 10px;
+  color: #fff;
+  opacity: 1;
+  font-size: 20px;
+}
+
+.googleButton:hover,
+.signUpButton:hover {
+  background-color: #546067;
+}
+
+.signIn {
+  margin-top: 20px;
+  color: #2770f7;
+  font-weight: bold;
+  opacity: 1;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 480px) {
+  .registerForm > h1 {
+    font-size: 26px;
+  }
+  .registerForm {
+    width: 80%;
+  }
+
+  .registerForm input {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .signUpButton {
+    width: auto;
+  }
+
+  .googleButton {
+    width: auto;
+  }
+  .googleButton > p {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,96 @@
+.userProfile {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profilePicContainer {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.profilePic {
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  border: 2px solid;
+  object-fit: cover;
+}
+
+.profilePicContainer:hover {
+  opacity: 1;
+}
+
+.userInfo {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.name {
+  font-size: 24px;
+  margin: 0;
+}
+
+.email {
+  margin: 0;
+  font-size: 18px;
+}
+
+.accountCreated {
+  margin: 0;
+  font-size: 16px;
+  opacity: 0.6;
+  font-style: italic;
+}
+
+.updateButton {
+  margin: 0 10px;
+  background-color: #005bc8;
+}
+
+.updateButton:hover {
+  background-color: #3a78c2;
+}
+
+.deleteButton {
+  margin: 0 10px;
+  background-color: #c50000;
+}
+
+.deleteButton:hover {
+  background-color: #e50606;
+}
+
+.nameSection {
+  display: flex;
+  align-items: center;
+}
+
+.titleInput {
+  width: auto;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 480px) {
+  .titleInput {
+    width: 40%;
+    font-size: 16px;
+  }
+
+  .deleteButton {
+    margin: 0;
+  }
+
+  .nameSection {
+    margin: 0 10px;
+  }
+}

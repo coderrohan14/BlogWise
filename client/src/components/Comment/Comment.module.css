@@ -1,0 +1,140 @@
+.postCard {
+  max-width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.userSection {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.userDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.userDetails > h4 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.userDetails > p {
+  margin: 0;
+  opacity: 0.7;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.body {
+  flex: 0.98;
+  opacity: 1;
+  margin: 0;
+  padding: 5px 10px;
+}
+
+.profileImage {
+  margin: 0 20px 0 10px;
+  width: 30px;
+  border-radius: 50%;
+  border: 2px solid;
+}
+
+.commentSection {
+  display: flex;
+  align-items: center;
+}
+
+.likeSection {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.likeSection > p {
+  opacity: 1;
+  display: block;
+  margin: 0;
+}
+
+.likeSection {
+  margin-right: 20px;
+}
+
+.timeAgo {
+  padding: 10px;
+  font-size: 14px;
+  font-style: italic;
+  opacity: 0.7;
+  margin-left: auto;
+}
+
+.editButtons {
+  display: flex;
+  align-items: center;
+}
+
+.deleteButton {
+  margin: 0 10px;
+  background-color: #c50000;
+}
+
+.deleteButton:hover {
+  background-color: #e50606;
+}
+
+.updateButton {
+  margin: 0 10px;
+  background-color: #005bc8;
+}
+
+.updateButton:hover {
+  background-color: #3a78c2;
+}
+
+.bodyInput {
+  flex: 0.98;
+  font-size: 16px;
+  opacity: 1;
+  padding: 5px 10px;
+}
+
+@media only screen and (max-width: 480px) {
+  /* styles for mobile devices go here */
+  .postCard {
+    padding: 10px;
+  }
+  .timeAgo {
+    margin: 0;
+    margin-left: auto;
+    padding: 5px;
+    font-size: 14px;
+  }
+
+  .profileImage {
+    margin: 0 10px;
+    width: 30px;
+  }
+
+  .bodyInput {
+    margin-right: 5px;
+    width: 20px;
+    padding: 5px;
+    font-size: 18px;
+  }
+
+  .deleteButton,
+  .updateButton {
+    margin: 0 5px;
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 14px;
+  }
+  .commentSection > p {
+    word-break: break-all;
+    overflow: auto;
+  }
+}

@@ -1,0 +1,128 @@
+.signInPage {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signInForm {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  width: 40%;
+  box-shadow: 0 0 10px #dadada;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.signInForm input {
+  width: 80%;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  box-shadow: 0 0 2px #dadada, 0 0 2px #dadada, 0 0 2px #dadada, 0 0 2px #dadada;
+  padding: 15px;
+}
+
+.loginButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #384045;
+  margin-top: 40px;
+  width: 30%;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.divider {
+  margin: auto;
+  width: 100%;
+  opacity: 0.7;
+  border: dotted;
+  border-width: 0;
+  border-top-width: 6px;
+}
+
+.googleButton {
+  margin: auto;
+  margin: 20px 0 10px 0;
+  display: flex;
+  width: 50%;
+  padding: 5px;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  background-color: #384045;
+  cursor: pointer;
+}
+
+p > span {
+  cursor: pointer;
+  color: blue;
+}
+
+.googleButton > p {
+  margin: 0;
+  text-decoration: none;
+  margin-left: 10px;
+  color: #fff;
+  opacity: 1;
+  font-size: 20px;
+}
+
+.googleButton:hover,
+.loginButton:hover {
+  background-color: #546067;
+}
+
+.forgotPassword {
+  cursor: pointer;
+  text-decoration: none;
+  opacity: 0.8;
+  padding: 10px;
+  align-self: flex-end;
+  margin-top: 10px;
+  margin-right: 6%;
+}
+
+.createAccount {
+  margin-top: 20px;
+  color: #2770f7;
+  font-weight: bold;
+  opacity: 1;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 480px) {
+  .signInForm > h1 {
+    font-size: 26px;
+  }
+  .signInForm {
+    width: 80%;
+  }
+
+  .signInForm input {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .loginButton {
+    width: auto;
+    margin-top: 16px;
+  }
+
+  .googleButton {
+    width: auto;
+  }
+  .googleButton > p {
+    font-size: 16px;
+  }
+}

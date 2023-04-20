@@ -1,0 +1,21 @@
+.home {
+  margin: 0;
+  height: auto;
+  width: 100%;
+  padding: 80px 0;
+  margin: auto;
+}
+
+.home > h2 {
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 28px;
+  align-self: flex-start;
+}
+
+.paginationButton {
+  position: sticky;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

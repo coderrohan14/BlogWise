@@ -1,0 +1,110 @@
+.postCard {
+  margin: auto;
+  margin-bottom: 20px;
+  width: 95%;
+  box-shadow: 0 0 10px #dadada;
+  z-index: 1;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.userSection {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.userDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.userDetails > h4 {
+  margin: 0;
+}
+
+.userDetails > p {
+  margin: 0;
+  opacity: 0.7;
+  font-style: italic;
+}
+
+.title {
+  margin: 0;
+  padding: 10px;
+}
+
+.body {
+  opacity: 1;
+  margin: 0;
+  padding: 5px 10px;
+}
+
+.profileImage {
+  margin: 0 20px 0 10px;
+  width: 30px;
+  border-radius: 50%;
+  border: 2px solid;
+}
+
+.readMore {
+  margin-left: 5px;
+  cursor: pointer;
+  color: #009eff;
+  font-weight: bold;
+  opacity: 1;
+}
+
+.userReactions {
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+}
+
+.likeSection > p,
+.commentSection > p {
+  opacity: 1;
+  margin: 0;
+  font-size: 18px;
+}
+
+.likeSection,
+.commentSection {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.likeSection {
+  margin-right: 20px;
+}
+
+.timeAgo {
+  padding: 10px;
+  font-style: italic;
+  opacity: 0.7;
+  margin-left: auto;
+}
+
+@media only screen and (max-width: 480px) {
+  h2 {
+    font-size: 22px;
+  }
+  p,
+  .readMore,
+  .timeAgo,
+  .userDetails > p {
+    font-size: 14px;
+  }
+
+  .postCard {
+    padding: 10px;
+    width: 90%;
+  }
+
+  .profileImage {
+    margin: 0 10px;
+  }
+}

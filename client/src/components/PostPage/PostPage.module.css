@@ -1,0 +1,217 @@
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.postPage {
+  margin: 0;
+  height: auto;
+  padding: 80px 10px;
+}
+
+.postCard {
+  width: 95%;
+  box-shadow: 0 0 10px #dadada;
+  z-index: 1;
+  border-radius: 5px;
+  height: auto;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.userSection {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.userDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.userDetails > h4 {
+  margin: 0;
+}
+
+.userDetails > p {
+  margin: 0;
+  margin-top: 5px;
+  padding: 0;
+  opacity: 0.7;
+  font-style: italic;
+}
+
+.title {
+  flex: 0.9;
+  margin: 0;
+  padding: 10px;
+}
+
+.body {
+  opacity: 1;
+  margin: 0;
+  padding: 5px 10px;
+}
+
+.profileImage {
+  margin: 0 20px 0 10px;
+  width: 80px;
+  border-radius: 50%;
+  border: 2px solid;
+  object-fit: cover;
+  object-position: center center;
+  overflow: hidden;
+}
+
+.readMore {
+  cursor: pointer;
+  color: #009eff;
+  font-weight: bold;
+  opacity: 1;
+}
+
+.userReactions {
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+}
+
+.likeSection > p,
+.commentSection > p {
+  opacity: 1;
+  margin: 0;
+  font-size: 18px;
+}
+
+.likeSection,
+.commentSection {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.likeSection {
+  margin-right: 20px;
+}
+
+.timeAgo {
+  padding: 10px;
+  font-style: italic;
+  opacity: 0.7;
+  margin-left: auto;
+}
+
+.divider {
+  margin: 20px 0;
+  width: 100%;
+  opacity: 0.7;
+  border: dashed;
+  border-width: 0;
+  border-top-width: 5px;
+}
+
+.commentDivider {
+  margin: 20px 0;
+  width: 100%;
+  opacity: 0.7;
+  border: dotted;
+  border-width: 0;
+  border-top-width: 2px;
+}
+
+.addCommentSection {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.addCommentSection > input {
+  flex: 0.9;
+  padding: 10px;
+}
+
+.addCommentSection > button {
+  flex: 0.1;
+}
+
+.editButtons {
+  flex: 0.1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.deleteButton {
+  margin: 0 10px;
+  background-color: #c50000;
+}
+
+.deleteButton:hover {
+  background-color: #e50606;
+}
+
+.updateButton {
+  margin: 0 10px;
+  background-color: #005bc8;
+}
+
+.updateButton:hover {
+  background-color: #3a78c2;
+}
+
+.titleInput {
+  flex: 0.9;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.bodyInput {
+  opacity: 1;
+  margin: 20px 0;
+  padding: 5px 10px;
+}
+
+@media only screen and (max-width: 480px) {
+  /* styles for mobile devices go here */
+  .postCard {
+    padding: 10px;
+  }
+  .timeAgo {
+    margin: 0;
+    margin-left: auto;
+    padding: 5px;
+    font-size: 14px;
+  }
+
+  .profileImage {
+    margin: 0 10px;
+    width: 30px;
+  }
+
+  .titleInput {
+    margin-right: 5px;
+    width: 19px;
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  .deleteButton,
+  .updateButton {
+    margin: 0 5px;
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 14px;
+  }
+
+  .title,
+  .body {
+    word-break: break-all;
+    overflow: auto;
+  }
+}
