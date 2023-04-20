@@ -13,13 +13,12 @@ const PostSchema = new mongoose.Schema(
       required: [true, "Please provide the post's title."],
       unique: [true, "Post with this title already exists!"],
       minLength: 1,
-      maxLength: 50,
+      maxLength: 200,
     },
     body: {
       type: String,
       required: [true, "Please provide the post's body."],
       minLength: 1,
-      maxLength: 1000,
     },
     comments: {
       type: [
